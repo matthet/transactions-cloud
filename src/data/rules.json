@@ -1,0 +1,146 @@
+[
+  {
+    "ruleMatchValue": "interest",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Yellow",
+    "ruleCategory": "Interest"
+  },
+  {
+    "ruleMatchValue": "loan",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Yellow",
+    "ruleCategory": "Loans"
+  },
+  {
+    "ruleMatchValue": "loans",
+    "ruleMatchType": "endsWith",
+    "ruleFlag": "Yellow",
+    "ruleCategory": "Loans"
+  },
+  {
+    "ruleMatchValue": "back payment",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Yellow",
+    "ruleCategory": "Loans"
+  },
+  {
+    "ruleMatchValue": "credit",
+    "ruleMatchType": "endsWith",
+    "ruleFlag": "Yellow",
+    "ruleCategory": "Loans"
+  },
+  {
+    "ruleMatchValue": "credit",
+    "ruleMatchType": "startsWith",
+    "ruleFlag": "Neutral",
+    "ruleCategory": "Loans"
+  },
+  {
+    "ruleMatchValue": "game",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Gaming"
+  },
+  {
+    "ruleMatchValue": "gaming",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Gaming"
+  },
+  {
+    "ruleMatchValue": "default",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Unpaid"
+  },
+  {
+    "ruleMatchValue": "delay",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Late Payment"
+  },
+  {
+    "ruleMatchValue": "delayed",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Late Payment"
+  },
+  {
+    "ruleMatchValue": "kickstarter",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Crowdfunding"
+  },
+  {
+    "ruleMatchValue": "indiegogo",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Crowdfunding"
+  },
+  {
+    "ruleMatchValue": "crowdfunding",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Crowdfunding"
+  },
+  {
+    "ruleMatchValue": "crowdfund",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Crowdfunding"
+  },
+  {
+    "ruleMatchValue": "personal loan",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Yellow",
+    "ruleCategory": "Consumer Loan"
+  },
+  {
+    "ruleMatchValue": "personal credit",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Yellow",
+    "ruleCategory": "Consumer Loan"
+  },
+  {
+    "ruleMatchValue": "gamble",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Online Gambling"
+  },
+  {
+    "ruleMatchValue": "bet",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Online Gambling"
+  },
+  {
+    "ruleMatchValue": "pokerstars",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Online Gambling"
+  },
+  {
+    "ruleMatchValue": "mybet",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Online Gambling"
+  },
+  {
+    "ruleMatchValue": "bet365",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Online Gambling"
+  },
+  {
+    "ruleMatchValue": "penalization",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Penalization"
+  },
+  {
+    "ruleMatchValue": "penalty",
+    "ruleMatchType": "contains",
+    "ruleFlag": "Red",
+    "ruleCategory": "Penalization"
+  }
+]
