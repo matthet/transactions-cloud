@@ -1,38 +1,56 @@
 body {
-  background-color: rgb(199, 198, 194);
+  background-color: rgb(230, 229, 227);
   padding: 20px;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-h1, h2, p, ul, li {
-  font-family: sans-serif;
+.section {
+  display: flex; flex-direction: row;
 }
-ul.header li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
+.width {
+  width: 33%;
 }
-ul.header {
-  background-color: #111;
-  padding: 0;
-}
-ul.header li a {
-  color: #FFF;
-  font-weight: bold;
+.button {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #ffffff;
+	display: inline-block;
+	cursor: pointer;
+	color: black;
+	font-family: Arial;
+	font-size: 15px;
+	padding: 6px 15px;
   text-decoration: none;
+  min-width: 120px;
+  margin-top: 20px;
+}
+.button:hover {
+	color: gray;
+}
+.button:focus {
+	position: relative;
+  color: black;
+  text-decoration: underline
+}
+.main {
+  text-align: center;
+  background-color: white;
+  margin-right: 20px;
+}
+.stuff {
+  text-align: center;
+  background-color: white;
+  margin-right: 20px;
+}
+.contact {
   padding: 20px;
-  display: inline-block;
+  background-color: lightgray;
+  text-align: left;
+  min-height: 660px;
 }
-.content {
-  background-color: #FFF;
+.heading {
   padding: 20px;
-}
-.content h2 {
-  padding: 0;
-  margin: 0;
-}
-.content li {
-  margin-bottom: 10px;
-}
-.active {
-  background-color: rgb(61, 64, 66);
+  text-align: left;
+  background-color: darkgray;
 }
