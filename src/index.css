@@ -7,9 +7,6 @@ body {
 .section {
   display: flex; flex-direction: row;
 }
-.width {
-  width: 33%;
-}
 .button {
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -33,24 +30,40 @@ body {
   color: black;
   text-decoration: underline
 }
+.category {
+  text-align: center;
+  background-color: white;
+  margin-right: 20px;
+  width: 25%;
+}
 .main {
   text-align: center;
   background-color: white;
-  margin-right: 20px;
 }
-.stuff {
+.match {
+  width: 75%;
+}
+.rule {
   text-align: center;
   background-color: white;
-  margin-right: 20px;
+  width: 70%;
 }
-.contact {
+.side {
   padding: 20px;
   background-color: lightgray;
   text-align: left;
   min-height: 660px;
+  width: 30%;
 }
 .heading {
   padding: 20px;
   text-align: left;
   background-color: darkgray;
+}
+.subheading {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.detail {
+  margin-top: 15px;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Contact from "./Contact";
+import Sidebar from "./Sidebar";
  
-class Stuff extends Component {
+class Match extends Component {
   constructor(props) {
     super(props);  
     this.state = { matchedRuleSets: [], matchCount: 0, relatedTxs: []};
@@ -9,13 +9,13 @@ class Stuff extends Component {
   }
 
   getSideBarDetails () {
-    let sideBarDetails = {heading: '', data: ''};
+    let sideBarDetails = { heading: '', data: '' };
 
     if (this.state.matchCount === 0) {
       if (this.state.relatedTxs.length) {
         sideBarDetails.heading = <div>TRANSACTIONS</div>;
         sideBarDetails.data = this.state.relatedTxs.map(tx => {
-          return <div style={{marginTop: '15px'}}>{tx.transactionId}: <div>{tx.transactionDescription}</div></div>
+          return <div className="detail">{tx.transactionId}: <div>{tx.transactionDescription}</div></div>
         })
       }
     } else {
@@ -48,47 +48,50 @@ class Stuff extends Component {
         matchedRuleSets.push([tx]);
       }
     });
+    console.log('matchedRuleSets', matchedRuleSets);
     this.setState({ matchedRuleSets, matchCount: 0, relatedTxs: [] });
   }
 
   render() {
     let sideBarDetails = this.getSideBarDetails();
-
     return (
       <div>
         <div className="heading">TRANSACTIONS HISTORY - BY MATCH</div>
         <div className="section">
-          <div style={{width: '70%'}}>
-            {
-              this.state.matchedRuleSets.map((set => {
-                return (
-                  <div>
-                    <button style={{backgroundColor: set[0].colour}} className="button" 
-                      onMouseOver={(e) => {
-                        e.preventDefault(); 
-                        this.setState({matchCount: set.length})
-                      }}
-                      onMouseLeave={(e) => {
-                        e.preventDefault(); 
-                        this.setState({matchCount: 0})
-                      }}
-                      onClick={(e) => {
-                        e.preventDefault(); 
-                        this.setState({matchCount: 0})
-                        this.setState({relatedTxs: set})
-                      }}>
-                      {set[0].transactionType}
-                    </button>
-                  </div>
-                );
-              }))
-            }
+          <div className="rule">
+            <div>
+              {
+                this.state.matchedRuleSets.map((set => {
+                  return (
+                    <div>
+                      <button style={{backgroundColor: set[0].colour}} 
+                        className="button" 
+                        onMouseOver={(e) => {
+                          e.preventDefault(); 
+                          this.setState({matchCount: set.length})
+                        }}
+                        onMouseLeave={(e) => {
+                          e.preventDefault(); 
+                          this.setState({matchCount: 0})
+                        }}
+                        onClick={(e) => {
+                          e.preventDefault(); 
+                          this.setState({matchCount: 0})
+                          this.setState({relatedTxs: set})
+                        }}>
+                        {set[0].matchRule.ruleCategory}
+                      </button>
+                    </div>
+                  );
+                }))
+              }
+            </div>
           </div>
-          <div style={{width: '30%'}} className="contact"><Contact sideBarDetails={sideBarDetails} /></div>
+          <div className="side"><Sidebar sideBarDetails={sideBarDetails} /></div>
         </div>
       </div>
     );
   }
 }
- 
-export default Stuff;
+
+export default Match;
