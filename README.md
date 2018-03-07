@@ -33,5 +33,5 @@ Unfortunately, this has meant I have not used many other libraries or build tool
 
 Testing is also something lacking. Having more time and more experience, I would further get to grips with Jest as a starting point and implement tests to cover each of the components, and the interactions between various parts of the app.
 
-#Thanks for this opportunity!
+# Thanks for this opportunity! Tara
 
