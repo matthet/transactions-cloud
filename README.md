@@ -7,13 +7,9 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 ## Transactions Cloud
 Application allowing you to observe and highlight specific kinds of transactions.
@@ -27,7 +23,7 @@ The central part of the UI becomes filled with the matches - the rules that were
 ### Development and Tooling
 
 I decided to use this challenge as an opportunity to gain some 'ramp-up' with React.
-I have not had experience with React in my career as of yet, and have just dabbled in my spare time.
+I have not had experience with React in my career as of yet, but have dabbled in my spare time, and am now eager to get up to speed!
 
 Unfortunately, this has meant I have not used many other libraries or build tools, as I was really going from 0 to solution.
 
