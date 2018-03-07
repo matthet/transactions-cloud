@@ -14,6 +14,8 @@ Launches the test runner in the interactive watch mode.
 ## Transactions Cloud
 Application allowing you to observe and highlight specific kinds of transactions.
 
+![alt text](https://raw.githubusercontent.com/matthet/spotcap/master/solutionImage3.png)
+
 Select a Transaction Category from the left most table. These have been categorised by the combination of transactionType and the colour associated with the matching rules.
 
 The central part of the UI becomes filled with the matches - the rules that were matched.
