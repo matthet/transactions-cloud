@@ -44,7 +44,7 @@ body {
   width: 75%;
 }
 .rule {
-  text-align: center;
+  /* text-align: center; */
   background-color: white;
   width: 70%;
 }
@@ -52,7 +52,7 @@ body {
   padding: 20px;
   background-color: lightgray;
   text-align: left;
-  min-height: 660px;
+  min-height: 720px;
   width: 30%;
 }
 .heading {

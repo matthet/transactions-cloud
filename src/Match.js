@@ -6,6 +6,7 @@ class Match extends Component {
     super(props);  
     this.state = { matchedRuleSets: [], matchCount: 0, relatedTxs: []};
     this.getSideBarDetails = this.getSideBarDetails.bind(this);
+    this.randomPosForCloud = this.randomPosForCloud.bind(this);
   }
 
   getSideBarDetails () {
@@ -25,30 +26,38 @@ class Match extends Component {
     return sideBarDetails;
   }
 
-  componentWillReceiveProps (nextProps) {
-    let matchedRuleSets = [];
+  randomPosForCloud () {
+    let random = Math.floor(Math.random() * (1 + 70 - 10)) + 10;
+    return random + '%';
+  }
 
+  componentWillReceiveProps (nextProps) {
+    if (nextProps === this.props) {
+      return;
+    }
+    
+    let matchedRuleSets = [];
+    console.log(nextProps.categoryToShow)
     nextProps.categoryToShow.set.forEach(tx => {
       if (matchedRuleSets.length) {
-        var i = 0;
+        let i = 0;
         let found = false;
 
         while (i < matchedRuleSets.length && !found) {
-          if (JSON.stringify(matchedRuleSets[i][0].matchRule) === JSON.stringify(tx.matchRule)) {
-            matchedRuleSets[i].push(tx);
+          if (JSON.stringify(matchedRuleSets[i].set[0].matchRule) === JSON.stringify(tx.matchRule)) {
+            matchedRuleSets[i].set.push(tx);
             found = true;
           }
           i += 1;
         }
 
         if (!found) { 
-          matchedRuleSets.push([tx]);
+          matchedRuleSets.push({set: [tx], randomPos: this.randomPosForCloud()});
         }
       } else {
-        matchedRuleSets.push([tx]);
+        matchedRuleSets.push({set: [tx], randomPos: this.randomPosForCloud()});
       }
     });
-    console.log('matchedRuleSets', matchedRuleSets);
     this.setState({ matchedRuleSets, matchCount: 0, relatedTxs: [] });
   }
 
@@ -61,14 +70,14 @@ class Match extends Component {
           <div className="rule">
             <div>
               {
-                this.state.matchedRuleSets.map((set => {
+                this.state.matchedRuleSets.map((matchedRuleSet => {
                   return (
                     <div>
-                      <button style={{backgroundColor: set[0].colour}} 
-                        className="button" 
+                      <button style={{backgroundColor: matchedRuleSet.set[0].colour, marginLeft: matchedRuleSet.randomPos}} 
+                        className="button"
                         onMouseOver={(e) => {
                           e.preventDefault(); 
-                          this.setState({matchCount: set.length})
+                          this.setState({matchCount: matchedRuleSet.set.length})
                         }}
                         onMouseLeave={(e) => {
                           e.preventDefault(); 
@@ -77,9 +86,9 @@ class Match extends Component {
                         onClick={(e) => {
                           e.preventDefault(); 
                           this.setState({matchCount: 0})
-                          this.setState({relatedTxs: set})
+                          this.setState({relatedTxs: matchedRuleSet.set})
                         }}>
-                        {set[0].matchRule.ruleCategory}
+                        {matchedRuleSet.set[0].matchRule.ruleMatchValue}
                       </button>
                     </div>
                   );

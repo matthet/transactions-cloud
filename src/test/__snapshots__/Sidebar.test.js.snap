@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar displays as expected 1`] = `
+<div>
+  <div
+    className="subheading"
+  >
+    <div>
+      DETAILS
+    </div>
+  </div>
+</div>
+`;
