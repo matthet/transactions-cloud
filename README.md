@@ -14,22 +14,9 @@ Launches the test runner in the interactive watch mode.
 ## Transactions Cloud
 Application allowing you to observe and highlight specific kinds of transactions.
 
-![alt text](https://raw.githubusercontent.com/matthet/spotcap/master/solutionImage3.png)
-
 Select a Transaction Category from the left most table. These have been categorised by the combination of transactionType and the colour associated with the matching rules.
 
 The central part of the UI becomes filled with the matches - the rules that were matched.
  - Hover over any rule, and you will see the count of matched transactions for that rule, displayed in the sidebar.
  - Click on any rule, and you will see the list of matched transactions with IDs and descriptions.
-
-### Development and Tooling
-
-I decided to use this challenge as an opportunity to gain some 'ramp-up' with React.
-I have not had experience with React in my career as of yet, but have dabbled in my spare time, and am now eager to get up to speed!
-
-Unfortunately, this has meant I have not used many other libraries or build tools, as I was really going from 0 to solution.
-
-Testing is also something lacking. Having more time and more experience, I would further get to grips with Jest as a starting point and implement tests to cover each of the components, and the interactions between various parts of the app.
-
-#### Thanks for this opportunity! Tara
 
